@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Matches</h2>
+  <ul>
+    {% for match in matches %}
+      <li>{{ match.mentor.user.username }} - {{ match.mentee.user.username }} (Score: {{ match.match_score }})</li>
+    {% empty %}
+      <li>No matches found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

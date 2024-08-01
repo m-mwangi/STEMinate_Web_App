@@ -1,0 +1,14 @@
+<!-- resources/templates/resources/resource_list.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Resources</h2>
+<a href="{% url 'resource_create' %}">Add New Resource</a>
+<ul>
+    {% for resource in resources %}
+    <li>
+        <a href="{% url 'resource_detail' resource.pk %}">{{ resource.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

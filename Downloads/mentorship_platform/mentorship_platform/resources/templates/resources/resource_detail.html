@@ -1,0 +1,14 @@
+<!-- resources/templates/resources/resource_detail.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>{{ resource.title }}</h2>
+<p>{{ resource.description }}</p>
+<a href="{{ resource.url }}" target="_blank">View Resource</a>
+<p>Category: {{ resource.get_category_display }}</p>
+<a href="{% url 'resource_update' resource.pk %}">Edit</a>
+<form action="{% url 'resource_delete' resource.pk %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Forums</h2>
+  <ul>
+    {% for forum in forums %}
+      <li><a href="{% url 'topic_list' forum.id %}">{{ forum.name }}</a>: {{ forum.description }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

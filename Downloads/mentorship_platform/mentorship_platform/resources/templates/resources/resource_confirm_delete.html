@@ -1,0 +1,12 @@
+<!-- resources/templates/resources/resource_confirm_delete.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Delete Resource</h2>
+<p>Are you sure you want to delete "{{ resource.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+    <a href="{% url 'resource_detail' resource.pk %}">Cancel</a>
+</form>
+{% endblock %}

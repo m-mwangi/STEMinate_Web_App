@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Profile</h2>
+  <p>Welcome to your profile page, {{ user.username }}!</p>
+  
+  <!-- Profile Information -->
+  <section>
+    <h3>Profile Details</h3>
+    <p><strong>Bio:</strong> {{ user_profile.bio }}</p>
+    <p><strong>Expertise:</strong> {{ user_profile.expertise }}</p>
+    <p><strong>Goals:</strong> {{ user_profile.goals }}</p>
+    <p><strong>Mentorship Preferences:</strong> {{ user_profile.mentorship_preferences }}</p>
+    <p><strong>Availability:</strong> {{ user_profile.availability }}</p>
+    <p><strong>Preferred Communication Methods:</strong> {{ user_profile.preferred_communication_methods }}</p>
+  </section>
+{% endblock %}

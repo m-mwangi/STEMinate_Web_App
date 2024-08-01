@@ -1,0 +1,12 @@
+<!-- profiles/templates/profiles/profile.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Profile</h2>
+  <p><strong>Bio:</strong> {{ user.profile.bio }}</p>
+  <p><strong>Expertise:</strong> {{ user.profile.expertise }}</p>
+  <p><strong>Goals:</strong> {{ user.profile.goals }}</p>
+  <p><strong>Mentorship Preferences:</strong> {{ user.profile.mentorship_preferences }}</p>
+  <p><strong>Availability:</strong> {{ user.profile.availability }}</p>
+  <p><strong>Preferred Communication Methods:</strong> {{ user.profile.preferred_communication_methods }}</p>
+{% endblock %}

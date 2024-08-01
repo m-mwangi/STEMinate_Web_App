@@ -1,0 +1,220 @@
+/* styles.css */
+
+/* Importing a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Background gradient */
+    background: linear-gradient(to right, #ff77ff, #00bfff); 
+    /* Alternates between pink and blue */
+}
+
+header {
+    background: linear-gradient(to right, #001f3f, #ff77ff); /* Navy blue and pink gradient */
+    color: #fff;
+    padding: 20px 0; /* Increased padding for better spacing */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    align-items: center; /* Center items horizontally */
+    height: 300px; /* Adjust height as needed */
+    justify-content: center; /* Center items vertically */
+}
+
+.logo {
+    height: 210px; /* Increased logo size */
+    position: absolute;
+    top: 100px; /* Adjust logo position from the top */
+    left: 100px; /* Adjust logo position from the left */
+}
+
+.welcome-text {
+    font-family: 'Oswald', sans-serif; /* Powerful font */
+    font-size: 4em; /* Larger size for emphasis */
+    animation: blinkAnimation 1.5s infinite; /* Blinking animation */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+nav {
+    position: absolute;
+    bottom: 20px; /* Position navigation below the welcome text */
+    width: 100%; /* Full width of the header */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Spacing between nav items */
+    position: relative; /* Needed for dropdown positioning */
+}
+
+/* Dropdown Button Styling */
+.dropdown .dropbtn {
+    background-color: #87CEFA; /* Light blue background */
+    color: #001f3f; /* Dark text color for contrast */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.dropdown .dropbtn:hover {
+    background-color: #00bfff; /* Slightly darker blue on hover */
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the button */
+    background-color: #f9f9f9; /* Light background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+    border-radius: 4px; /* Rounded corners */
+    z-index: 1; /* Make sure it is on top */
+}
+
+.dropdown-content a {
+    color: black; /* Black text */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display for links */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #00bfff; /* Darker blue for button on hover */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+/* Ensure the dropdown button and content are styled appropriately */
+nav ul li .dropdown {
+    display: inline-block;
+}
+
+nav ul li .dropdown-content a {
+    color: black; /* Adjust text color for dropdown links */
+}
+
+/* Dropdown styling for larger screens */
+@media (min-width: 768px) {
+    .dropdown {
+        display: inline-block; /* Show dropdown on larger screens */
+    }
+}
+
+@keyframes blinkAnimation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes bounceLeftRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px); /* Adjust the bounce distance */
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* New section for Learn More */
+.learn-more {
+    padding: 40px;
+    background: #001f3f; /* Dark navy blue background */
+    color: #fff; /* White text for contrast */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+    animation: bounceLeftRight 2s infinite; /* Apply bounce animation */
+}
+
+.learn-more h2 {
+    font-family: 'Oswald', sans-serif; /* Consistent font style */
+    font-size: 2.5em;
+    color: #fff; /* White text color for contrast */
+    margin-top: 0;
+}
+
+.learn-more p {
+    font-size: 1.2em;
+    color: #ddd; /* Light grey text color for readability */
+}
+
+.learn-more ul {
+    list-style: none;
+    padding: 0;
+}
+
+.learn-more ul li {
+    margin: 10px 0;
+}
+
+.learn-more ul li a {
+    color: #87CEFA; /* Light blue for links */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.learn-more ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style for evenly spaced images */
+.images {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between; /* Distributes space evenly */
+    gap: 20px; /* Space between images */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.images img {
+    width: 48%; /* Adjust width to fit evenly */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
