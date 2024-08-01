@@ -44,3 +44,9 @@ Install the dependencies Still, on your terminal, write the command below. This 
    
 This command will start the application, ensuring the server and the database are connected. You can access it at http://127.0.0.1:8000/ in your web browser.
 
+# The App:
+One can then interact with the app at the homepage, where you can register as a user. Later, one can navigate to profile and you have the choice to make updates to your profile to help with the mentor-mentee matching.
+
+Then you navigate to the find matches, where you look at different people and the probability of being the right match.
+
+After finding a match, you can message her on the message section and start connection.
