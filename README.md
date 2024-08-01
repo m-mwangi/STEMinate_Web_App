@@ -31,12 +31,12 @@ To set up locally, These are the steps you should follow:
      # git clone https://github.com/m-mwangi/STEMinate_Web_App.git
 You can also find the link by clicking on the green button written code on my repository
 
-Navigate to the directory After cloning, move into the directory:
+Navigate to the directory- After cloning, move into the directory:
 
-   # mentorship_platform
+    #cd mentorship_platform
 Install the dependencies Still, on your terminal, write the command below. This command will install all required dependencies for the project.
 
-  # pip install django
+    #pip install django
 
 Start the application
 
