@@ -40,6 +40,7 @@ Install the dependencies Still, on your terminal, write the command below. This 
 
 Start the application
 
-  #  python manage.py runserver
+   #python manage.py runserver
+   
 This command will start the application, ensuring the server and the database are connected. You can access it at http://127.0.0.1:8000/ in your web browser.
 
